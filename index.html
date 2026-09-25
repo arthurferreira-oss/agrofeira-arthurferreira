@@ -1,41 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFeira - Paragominas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroFeira — Página Inicial</title>
 </head>
 <body>
 
-    <header>
-        <h1>AgroFeira Paragominas</h1>
-        <nav>
-            <ul>
-                <li><a href="#apresentacao">Sobre a Feira</a></li>
-                <li><a href="#produtos">Nossos Produtos</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Link de Pular -->
+  <a href="#conteudo-principal" class="pular">Pular para o conteúdo principal</a>
 
-    <main>
-        <section>
-            <h2 id="apresentacao">Sobre a AgroFeira</h2>
-            <p>A AgroFeira é um espaço dedicado à valorização da agricultura familiar e dos produtores rurais da região de Paragominas. Nosso objetivo é conectar quem produz alimentos frescos e de qualidade diretamente ao consumidor final, fortalecendo a economia local e promovendo a sustentabilidade no campo.</p>
-        </section>
+  <!-- Cabeçalho -->
+  <header class="cabecalho-site">
+    <h1>AgroFeira</h1>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Início</a></li>
+        <li><a href="safra.html">Calendário de Safra</a></li>
+        <li><a href="cadastro-produtor.html">Cadastro de Produtor</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section>
-            <h2 id="produtos">Produtos Disponíveis</h2>
-            <ul>
-                <li>Mandioca - Vendido por quilograma (kg)</li>
-                <li>Açaí médio - Vendido por litro (L)</li>
-                <li>Banana-prata - Vendido por dúzia</li>
-            </ul>
-        </section>
-    </main>
+  <!-- Conteúdo Principal -->
+  <main id="conteudo-principal">
 
-    <footer>
-        <p>AgroFeira Paragominas &copy; 2026 - Feira de produtores regionais.</p>
-    </footer>
+    <!-- Primeira Seção Temática -->
+    <section aria-labelledby="titulo-apresentacao">
+      <h2 id="titulo-apresentacao">Apresentação</h2>
+      <p>A AgroFeira conecta <em>produtores locais</em> diretamente aos consumidores de nossa região.</p>
+      
+      <!-- NAVEGAÇÃO INTERNA DE ATERRISSAGEM (LINKS INTERNOS EXIGIDOS) -->
+      <p>Atalhos rápidos: <a href="#titulo-apresentacao">Ir para Apresentação</a> | <a href="#titulo-produtos">Ir para Nossos Produtos</a></p>
+
+      <!-- Figura com srcset / sizes -->
+      <figure class="figura-destaque">
+        <img 
+          src="feira-330.jpg" 
+          srcset="feira-330.jpg 330w, feira-1280.jpg 1280w" 
+          sizes="(max-width: 600px) 330px, 1280px" 
+          width="330" 
+          height="247" 
+          alt="Bancas organizadas com hortaliças e frutas frescas na feira livre">
+        <figcaption>
+          Feira comunitária em dia de movimento. Foto: Rayelle da Silva Freitas, CC BY-SA 4.0, via Wikimedia Commons.
+        </figcaption>
+      </figure>
+
+      <!-- Busca -->
+      <form class="busca" role="search" action="index.html" method="get">
+        <label for="campo-busca">Procurar produto</label>
+        <input type="search" id="campo-busca" name="q">
+        <button type="submit">
+          <img src="lupa.png" width="40" height="40" alt="Buscar produto">
+        </button>
+      </form>
+    </section>
+
+    <!-- Segunda Seção Temática -->
+    <section aria-labelledby="titulo-produtos">
+      <h2 id="titulo-produtos">Nossos Produtos</h2>
+      <ul class="lista-produtos">
+        <li class="cartao-produto">Mandioca (saca de 60 kg)</li>
+        <li class="cartao-produto">Banana-prata (cacho)</li>
+        <li class="cartao-produto">Açaí (rasa)</li>
+        <li class="cartao-produto">Pimenta-do-reino (quilo)</li>
+        <li class="cartao-produto">Cupuaçu (quilo)</li>
+        <li class="cartao-produto">Alface (maço)</li>
+      </ul>
+
+      <!-- Aviso usando <div> (Caixa genérica) -->
+      <div class="aviso">
+        <p>Aviso: Os preços podem mudar a cada semana dependendo do clima. <strong>Atenção: verifique as ofertas no local!</strong></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Conteúdo Relacionado (Fora do Main) -->
+  <aside>
+    <h2>Endereço e Horário</h2>
+    <p>Praça Central, S/N — Aos sábados, das 06h às 12h.</p>
+  </aside>
+
+  <!-- Rodapé -->
+  <footer class="rodape-site">
+    <p>&copy; 2026 AgroFeira. Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>

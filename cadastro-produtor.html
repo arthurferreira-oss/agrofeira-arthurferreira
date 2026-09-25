@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroFeira — Cadastro de Produtor</title>
+</head>
+<body>
+
+  <a href="#conteudo-principal" class="pular">Pular para o conteúdo principal</a>
+
+  <header class="cabecalho-site">
+    <h1>AgroFeira</h1>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="safra.html">Calendário de Safra</a></li>
+        <li><a href="cadastro-produtor.html" aria-current="page">Cadastro de Produtor</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo-principal">
+    <h2>Formulário de Cadastro do Produtor</h2>
+
+    <form class="formulario-cadastro" action="cadastro-produtor.html" method="get">
+
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <p>
+          <label for="nome">Nome completo:</label><br>
+          <input type="text" id="nome" name="nome" autocomplete="name" required>
+        </p>
+
+        <p>
+          <label for="email">E-mail:</label><br>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </p>
+
+        <p>
+          <label for="telefone">Telefone:</label><br>
+          <input type="tel" id="telefone" name="telefone" autocomplete="tel">
+        </p>
+
+        <p>
+          <label for="caf">Número do CAF:</label><br>
+          <input type="text" id="caf" name="caf">
+        </p>
+
+        <p>
+          <label for="cep">CEP da propriedade:</label><br>
+          <input type="text" id="cep" name="cep" inputmode="numeric" pattern="[0-9]{5}-?[0-9]{3}" aria-describedby="ajuda-cep">
+          <span id="ajuda-cep">Formato esperado: 00000-000</span>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Dados da Produção</legend>
+
+        <p>
+          <label for="produto-principal">Produto principal:</label><br>
+          <select id="produto-principal" name="produto-principal" required>
+            <option value="">Escolha um produto</option>
+            <option value="Mandioca">Mandioca</option>
+            <option value="Banana-prata">Banana-prata</option>
+            <option value="Açaí">Açaí</option>
+            <option value="Pimenta-do-reino">Pimenta-do-reino</option>
+            <option value="Cupuaçu">Cupuaçu</option>
+            <option value="Alface">Alface</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="quantidade">Quantidade por semana:</label><br>
+          <input type="number" id="quantidade" name="quantidade" min="1" max="500" step="1" required>
+        </p>
+
+        <p>
+          <label for="data-inicio">Começa a entregar em:</label><br>
+          <input type="date" id="data-inicio" name="data-inicio">
+        </p>
+
+        <fieldset>
+          <legend>Como entrega:</legend>
+          <input type="radio" id="entrega-leva" name="forma-entrega" value="leva">
+          <label for="entrega-leva">Leva à feira</label><br>
+
+          <input type="radio" id="entrega-retira" name="forma-entrega" value="retira">
+          <label for="entrega-retira">A feira retira na propriedade</label>
+        </fieldset>
+
+        <p>
+          <label for="observacao">Observação:</label><br>
+          <textarea id="observacao" name="observacao" rows="4" cols="40"></textarea>
+        </p>
+
+        <p>
+          <input type="checkbox" id="aceite" name="aceite" required>
+          <label for="aceite">Concordo e aceito as regras da feira</label>
+        </p>
+
+      </fieldset>
+
+      <p>
+        <button type="submit">Cadastrar</button>
+      </p>
+
+    </form>
+
+    <p role="status"></p>
+  </main>
+
+  <footer class="rodape-site">
+    <p>&copy; 2026 AgroFeira. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
