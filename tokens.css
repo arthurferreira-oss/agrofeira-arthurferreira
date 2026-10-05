@@ -38,7 +38,7 @@
   --fonte-texto: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Fonte do Google Fonts escolhida no Passo 2 (substitua 'NomeDaFonte' pela sua) */
-  --fonte-titulo: "NomeDaFonte", serif;
+  --fonte-titulo:  font-family: "Google Sans Flex", sans-serif;
 
   /* Texto corrido base */
   --tamanho-texto: 1rem;
