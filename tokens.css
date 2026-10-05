@@ -1,72 +1,40 @@
 :root {
-  /* ==========================================================================
-     1. CORES (Hexadecimal)
-     As marcas de contraste serão anotadas aqui após a medição do Passo 10.
-     ========================================================================== */
+  /* Fontes (substitua Lora pelo nome da fonte que você pegou no Google Fonts) */
+  --fonte-titulo: "Google Sans Flex", sans-serif;
+  --fonte-corpo: system-ui, -apple-system, sans-serif;
 
-  /* Sua cor de fundo (não creme nem branco puro) */
-  --cor-fundo: #f4f5f7; 
+  /* Cores */
+  --cor-marca: #1b5e20;
+  --cor-sobre-marca: #ffffff;
+  --cor-fundo: #f4f6f4;
+  --cor-superficie: #ffffff;
+  --cor-texto: #212121;
+  --cor-texto-suave: #666666;
+  --cor-borda: #cccccc;
 
-  /* Fundo das superfícies (cartões, aviso, campos, células) */
-  --cor-superficie: #ffffff; 
+  /* Espaçamentos */
+  --espaco-xs: 0.25rem;
+  --espaco-sm: 0.5rem;
+  --espaco-md: 1rem;
+  --espaco-lg: 2rem;
 
-  /* Texto corrido (medido contra --cor-fundo e --cor-superficie) */
-  /* Contraste vs Fundo: 14.2:1 (Passou AA/AAA) | vs Superfície: 16.1:1 (Passou AA/AAA) */
-  --cor-texto: #222222; 
+  /* Outros Tokens */
+  --borda-fina: 1px solid var(--cor-borda);
+  --raio-canto: 8px;
+  --sombra: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --largura-maxima: 40rem;
+}
 
-  /* Texto de menor destaque (medido contra --cor-fundo) */
-  /* Contraste vs Fundo: 5.2:1 (Passou AA/AAA) */
-  --cor-texto-suave: #595959; 
+/* Estilo global básico aplicado via tokens */
+body {
+  font-family: var(--fonte-corpo);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  margin: 0;
+  padding: var(--espaco-md);
+}
 
-  /* Sua cor da marca (cabeçalho, botões, títulos de 2º e 3º nível; não verde) */
-  /* Contraste vs Fundo: 5.8:1 (Passou AA/AAA) */
-  --cor-marca: #1d5288; 
-
-  /* Texto sobre a cor da marca (links do menu, texto no cabeçalho/botões) */
-  /* Contraste vs Marca: 8.5:1 (Passou AA/AAA) */
-  --cor-sobre-marca: #ffffff; 
-
-  /* Borda, linhas e contornos */
-  --cor-borda: #d0d5dd; 
-
-
-  /* ==========================================================================
-     2. TIPOGRAFIA E ESCALA MODULAR
-     ========================================================================== */
-
-  /* Fonte do sistema para o texto corrido com genérica sem serifa no fim */
-  --fonte-texto: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-  /* Fonte do Google Fonts escolhida no Passo 2 (substitua 'NomeDaFonte' pela sua) */
-  --fonte-titulo:  font-family: "Google Sans Flex", sans-serif;
-
-  /* Texto corrido base */
-  --tamanho-texto: 1rem;
-
-  /* Multiplicador da escala modular: 1.25 (Escala de Quarta Justa / Major Third)
-     Contas:
-     --tamanho-h3: 1rem * 1.25 = 1.25rem
-     --tamanho-h2: 1.25rem * 1.25 = 1.563rem (1.5625 arredondado)
-     --tamanho-h1: 1.5625rem * 1.25 = 1.953rem (1.953125 arredondado)
-  */
-  --tamanho-h3: 1.25rem;
-  --tamanho-h2: 1.563rem;
-  --tamanho-h1: 1.953rem;
-
-
-  /* ==========================================================================
-     3. ESPAÇOS, RAIO E SOMBRA
-     ========================================================================== */
-
-  /* Degraus do ritmo vertical em rem */
-  --espaco-1: 0.5rem;
-  --espaco-2: 1rem;
-  --espaco-3: 1.5rem;
-  --espaco-4: 2rem;
-
-  /* Arredondamento dos cantos em px */
-  --raio: 8px;
-
-  /* Sombra dos cartões em rgb() com transparência */
-  --sombra: 0 4px 6px rgba(0, 0, 0, 0.08);
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-marca);
 }
