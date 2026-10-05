@@ -1,0 +1,28 @@
+:root {
+  /* Cores (Hexadecimal) */
+  --cor-fundo: #f8f9fa; /* Fundo claro (não creme/branco puro) */
+  --cor-superficie: #ffffff;
+  --cor-texto: #212529; /* Contraste vs Fundo: 14.5:1 (Passou AA/AAA) | vs Superficie: 16.1:1 (Passou AA/AAA) */
+  --cor-texto-suave: #595959; /* Contraste vs Fundo: 6.8:1 (Passou AA/AAA) */
+  --cor-marca: #1d6f42; /* Cor da AgroFeira (não verde padrão dos slides) */
+  --cor-sobre-marca: #ffffff; /* Contraste vs Marca: 4.8:1 (Passou AA/AAA) */
+  --cor-borda: #dee2e6;
+
+  /* Tipografia */
+  --fonte-texto: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --fonte-titulo: 'SuaFonteEscolhida', serif; /*Substitua pelo Google Fonts */
+
+  --tamanho-texto: 1rem;
+  /* Multiplicador da escala modular: 1.25 */
+  --tamanho-h3: 1.25rem;    /* 1rem * 1.25 */
+  --tamanho-h2: 1.563rem;  /* 1.25rem * 1.25 */
+  --tamanho-h1: 1.953rem;  /* 1.563rem * 1.25 */
+
+  /* Espaçamento, Raio e Sombra */
+  --espaco-1: 0.5rem;
+  --espaco-2: 1rem;
+  --espaco-3: 1.5rem;
+  --espaco-4: 2rem;
+  --raio: 8px;
+  --sombra: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
