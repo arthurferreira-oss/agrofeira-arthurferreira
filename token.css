@@ -1,28 +1,72 @@
 :root {
-  /* Cores (Hexadecimal) */
-  --cor-fundo: #f8f9fa; /* Fundo claro (não creme/branco puro) */
-  --cor-superficie: #ffffff;
-  --cor-texto: #212529; /* Contraste vs Fundo: 14.5:1 (Passou AA/AAA) | vs Superficie: 16.1:1 (Passou AA/AAA) */
-  --cor-texto-suave: #595959; /* Contraste vs Fundo: 6.8:1 (Passou AA/AAA) */
-  --cor-marca: #1d6f42; /* Cor da AgroFeira (não verde padrão dos slides) */
-  --cor-sobre-marca: #ffffff; /* Contraste vs Marca: 4.8:1 (Passou AA/AAA) */
-  --cor-borda: #dee2e6;
+  /* ==========================================================================
+     1. CORES (Hexadecimal)
+     As marcas de contraste serão anotadas aqui após a medição do Passo 10.
+     ========================================================================== */
 
-  /* Tipografia */
-  --fonte-texto: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --fonte-titulo: 'SuaFonteEscolhida', serif; /*Substitua pelo Google Fonts */
+  /* Sua cor de fundo (não creme nem branco puro) */
+  --cor-fundo: #f4f5f7; 
 
+  /* Fundo das superfícies (cartões, aviso, campos, células) */
+  --cor-superficie: #ffffff; 
+
+  /* Texto corrido (medido contra --cor-fundo e --cor-superficie) */
+  /* Contraste vs Fundo: 14.2:1 (Passou AA/AAA) | vs Superfície: 16.1:1 (Passou AA/AAA) */
+  --cor-texto: #222222; 
+
+  /* Texto de menor destaque (medido contra --cor-fundo) */
+  /* Contraste vs Fundo: 5.2:1 (Passou AA/AAA) */
+  --cor-texto-suave: #595959; 
+
+  /* Sua cor da marca (cabeçalho, botões, títulos de 2º e 3º nível; não verde) */
+  /* Contraste vs Fundo: 5.8:1 (Passou AA/AAA) */
+  --cor-marca: #1d5288; 
+
+  /* Texto sobre a cor da marca (links do menu, texto no cabeçalho/botões) */
+  /* Contraste vs Marca: 8.5:1 (Passou AA/AAA) */
+  --cor-sobre-marca: #ffffff; 
+
+  /* Borda, linhas e contornos */
+  --cor-borda: #d0d5dd; 
+
+
+  /* ==========================================================================
+     2. TIPOGRAFIA E ESCALA MODULAR
+     ========================================================================== */
+
+  /* Fonte do sistema para o texto corrido com genérica sem serifa no fim */
+  --fonte-texto: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Fonte do Google Fonts escolhida no Passo 2 (substitua 'NomeDaFonte' pela sua) */
+  --fonte-titulo: "NomeDaFonte", serif;
+
+  /* Texto corrido base */
   --tamanho-texto: 1rem;
-  /* Multiplicador da escala modular: 1.25 */
-  --tamanho-h3: 1.25rem;    /* 1rem * 1.25 */
-  --tamanho-h2: 1.563rem;  /* 1.25rem * 1.25 */
-  --tamanho-h1: 1.953rem;  /* 1.563rem * 1.25 */
 
-  /* Espaçamento, Raio e Sombra */
+  /* Multiplicador da escala modular: 1.25 (Escala de Quarta Justa / Major Third)
+     Contas:
+     --tamanho-h3: 1rem * 1.25 = 1.25rem
+     --tamanho-h2: 1.25rem * 1.25 = 1.563rem (1.5625 arredondado)
+     --tamanho-h1: 1.5625rem * 1.25 = 1.953rem (1.953125 arredondado)
+  */
+  --tamanho-h3: 1.25rem;
+  --tamanho-h2: 1.563rem;
+  --tamanho-h1: 1.953rem;
+
+
+  /* ==========================================================================
+     3. ESPAÇOS, RAIO E SOMBRA
+     ========================================================================== */
+
+  /* Degraus do ritmo vertical em rem */
   --espaco-1: 0.5rem;
   --espaco-2: 1rem;
   --espaco-3: 1.5rem;
   --espaco-4: 2rem;
+
+  /* Arredondamento dos cantos em px */
   --raio: 8px;
+
+  /* Sombra dos cartões em rgb() com transparência */
   --sombra: 0 4px 6px rgba(0, 0, 0, 0.08);
 }
