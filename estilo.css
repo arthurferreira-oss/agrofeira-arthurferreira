@@ -1,89 +1,126 @@
 /* ==========================================================================
-   Ajustes de Alinhamento e Forma das Peças (Home, Cadastro e Geral)
+   Passo 7 — O estilo: as peças da home
    ========================================================================== */
 
-/* 1. Busca: Para alinhar o campo de digitar e o botão da lupa lado a lado */
-.busca {
-  margin-top: var(--espaco-2);
-  margin-bottom: var(--espaco-3);
+/* 1. A lista de produtos (lista-produtos)
+   Sem as bolinhas e sem o recuo: aqui a lista é de cartões */
+.lista-produtos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+/* 2. Cada cartão (cartaoproduto / cartao-produto)
+   Fundo de superfície, borda fina na cor de borda, cantos arredondados,
+   sombra, preenchimento, um degrau de espaço e largura máxima em rem */
+.cartao-produto {
+  background-color: var(--cor-superficie);
+  border: var(--borda-fina);
+  border-radius: var(--raio-canto);
+  box-shadow: var(--sombra);
+  padding: var(--espaco-md);
+  margin-bottom: var(--espaco-md);
+  max-width: var(--largura-maxima);
+}
+
+/* 3. A legenda da foto, dentro da figura (figuradestaque)
+   Texto suave, com um pequeno espaço entre a foto e a legenda */
+.figura-destaque figcaption {
+  color: var(--cor-texto-suave);
+  margin-top: var(--espaco-xs);
+}
+
+/* 4. O campo de digitar, dentro da busca (busca)
+   Borda fina na cor de borda, cantos arredondados, preenchimento e fundo de superfície */
 .busca input[type="search"],
 .busca input[type="text"] {
+  border: var(--borda-fina);
+  border-radius: var(--raio-canto);
+  padding: var(--espaco-sm);
   background-color: var(--cor-superficie);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio);
-  padding: 0.5em 0.75em;
-  font-family: inherit;
-  font-size: inherit;
-  vertical-align: middle; /* Mantém o input e o botão alinhados na mesma linha */
 }
 
-/* 2. Botões do site (Lupa e Enviar Cadastro) */
+/* 5. Os dois botões do site — o da lupa (busca) e o de enviar (cadastro)
+   Fundo da marca, texto sobre a marca, sem borda de fábrica, cantos arredondados e preenchimento.
+   Escritos numa regra só, sem classe nova no HTML */
 .busca button,
 .formulario-cadastro button[type="submit"] {
   background-color: var(--cor-marca);
   color: var(--cor-sobre-marca);
   border: none;
-  border-radius: var(--raio);
-  padding: 0.5em 1em;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: pointer;
-  vertical-align: middle;
+  border-radius: var(--raio-canto);
+  padding: var(--espaco-sm) var(--espaco-md);
 }
 
-/* Espaço para a lupa no botão de busca */
-.busca button {
-  padding: 0.5em 0.8em;
-}
-
-/* 3. O Aviso: Caixa com a borda na cor da marca */
+/* 6. O aviso (aviso)
+   Fundo de superfície, borda na cor da marca, cantos arredondados, preenchimento
+   e a mesma largura máxima dos parágrafos */
 .aviso {
   background-color: var(--cor-superficie);
-  border: 1px solid var(--cor-marca); /* Borda verde/marca em toda a volta */
-  border-radius: var(--raio);
-  padding: var(--espaco-3);
-  max-width: 65ch;
-  margin-top: var(--espaco-3);
-  margin-bottom: var(--espaco-3);
+  border: 1px solid var(--cor-marca);
+  border-radius: var(--raio-canto);
+  padding: var(--espaco-md);
+  max-width: var(--largura-maxima);
 }
 
-/* 4. Formulário de Cadastro: Espaçamento entre os rótulos e campos */
+
+/* ==========================================================================
+   Passo 8 — O estilo: safra, cadastro e sobre
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   SAFRA
+   -------------------------------------------------------------------------- */
+
+/* Todas as células da tabela (tabelasafra), de cabeçalho e de dado */
+.tabela-safra th,
+.tabela-safra td {
+  padding: var(--espaco-sm) var(--espaco-md);
+}
+
+/* Os cabeçalhos de coluna — a linha dos meses
+   (Os cabeçalhos de linha <th> com o nome do produto mantêm-se como estão) */
+.tabela-safra thead th {
+  background-color: var(--cor-marca);
+  color: var(--cor-sobre-marca);
+}
+
+/* As células de dado */
+.tabela-safra td {
+  background-color: var(--cor-superficie);
+}
+
+
+/* --------------------------------------------------------------------------
+   CADASTRO
+   -------------------------------------------------------------------------- */
+
+/* Os dois grupos de fora do formulário (formulario-cadastro)
+   Moldura: borda fina na cor de borda, cantos arredondados, preenchimento e espaço entre eles */
 .formulario-cadastro fieldset {
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio);
-  padding: var(--espaco-3);
-  margin-bottom: var(--espaco-3);
-  max-width: 65ch;
+  border: var(--borda-fina);
+  border-radius: var(--raio-canto);
+  padding: var(--espaco-md);
+  margin-bottom: var(--espaco-md);
 }
 
-/* Título de cada grupo (Quem é você, O que você vende, etc.) */
-.formulario-cadastro legend {
-  font-weight: bold;
-  color: var(--cor-marca);
-  padding: 0 var(--espaco-1);
-}
-
-/* Grupo de dentro "Como entrega": Sem borda, sem padding */
+/* O grupo de dentro, "Como entrega"
+   Sem borda nenhuma e sem preenchimento */
 .formulario-cadastro fieldset fieldset {
   border: none;
   padding: 0;
-  margin-top: var(--espaco-2);
-  margin-bottom: var(--espaco-2);
+  margin-bottom: 0;
 }
 
-.formulario-cadastro fieldset fieldset legend {
-  padding-left: 0;
+/* O título de cada grupo (legend) em negrito, na cor da marca */
+.formulario-cadastro legend {
+  font-weight: bold;
+  color: var(--cor-marca);
 }
 
-/* Parágrafos ou divs contendo Rótulo + Input no formulário */
-.formulario-cadastro p,
-.formulario-cadastro label {
-  margin-bottom: var(--espaco-2);
-}
-
-/* Estilo padrão de todos os campos de digitar / seleção */
+/* Os campos de digitar — texto, e-mail, telefone, número, data —, a lista de seleção e a área de texto
+   Borda fina na cor de borda, cantos arredondados, preenchimento e fundo de superfície.
+   (Botões de escolha/radio e caixa de marcar/checkbox ficam como estão) */
 .formulario-cadastro input[type="text"],
 .formulario-cadastro input[type="email"],
 .formulario-cadastro input[type="tel"],
@@ -91,15 +128,35 @@
 .formulario-cadastro input[type="date"],
 .formulario-cadastro select,
 .formulario-cadastro textarea {
+  border: var(--borda-fina);
+  border-radius: var(--raio-canto);
+  padding: var(--espaco-sm);
   background-color: var(--cor-superficie);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio);
-  padding: 0.5em 0.75em;
-  font-family: inherit;
-  font-size: inherit;
 }
 
-/* Botão de Enviar Cadastro: Ganha margem acima para se separar do formulário */
-.formulario-cadastro button[type="submit"] {
-  margin-top: var(--espaco-2);
+
+/* --------------------------------------------------------------------------
+   SOBRE
+   -------------------------------------------------------------------------- */
+
+/* A citação do depoimento: texto suave e recuo à esquerda feito com preenchimento */
+blockquote {
+  color: var(--cor-texto-suave);
+  padding-left: var(--espaco-md);
+}
+
+/* Os termos do glossário em negrito */
+dt {
+  font-weight: bold;
+}
+
+/* Cada pergunta (pergunta / detalhe de dúvida)
+   Borda fina na cor de borda, cantos arredondados, preenchimento, pequeno espaço 
+   e a mesma largura máxima dos parágrafos */
+.pergunta {
+  border: var(--borda-fina);
+  border-radius: var(--raio-canto);
+  padding: var(--espaco-md);
+  margin-bottom: var(--espaco-sm);
+  max-width: var(--largura-maxima);
 }
