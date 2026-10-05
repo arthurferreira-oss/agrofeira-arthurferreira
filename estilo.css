@@ -1,158 +1,89 @@
 /* ==========================================================================
-   PASSO 6 — Cabeçalho, Menu e Rodapé
+   Ajustes de Alinhamento e Forma das Peças (Home, Cadastro e Geral)
    ========================================================================== */
 
-/* Cabeçalho: Faixa com cor da marca e preenchimento */
-.cabecalho-site {
-  background-color: var(--cor-marca);
-  color: var(--cor-sobre-marca);
-  padding: var(--espaco-3);
+/* 1. Busca: Para alinhar o campo de digitar e o botão da lupa lado a lado */
+.busca {
+  margin-top: var(--espaco-2);
+  margin-bottom: var(--espaco-3);
 }
 
-/* Título de 1º nível (mora no cabeçalho sobre a cor da marca) */
-.cabecalho-site h1 {
-  color: var(--cor-sobre-marca);
-  margin-bottom: var(--espaco-2);
-}
-
-/* Menu: Remove bolinhas e recuo padrão de lista */
-.menu {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-/* Links do menu: Cor sobre a marca */
-.menu a {
-  color: var(--cor-sobre-marca);
-  text-decoration: underline;
-}
-
-/* Link da página atual: Em negrito usando o atributo da Atividade 2 (ex: aria-current="page") */
-.menu a[aria-current="page"] {
-  font-weight: bold;
-}
-
-/* Rodapé: Linha fina em cima, texto suave e preenchimento */
-.rodape-site {
-  border-top: 1px solid var(--cor-borda);
-  color: var(--cor-texto-suave);
-  padding: var(--espaco-3);
-  margin-top: var(--espaco-4);
-}
-
-
-/* ==========================================================================
-   PASSO 7 — As peças da Home
-   ========================================================================== */
-
-/* Lista de produtos: Sem bolinhas e sem recuo */
-.lista-produtos {
-  list-style: none;
-  padding-left: 0;
-}
-
-/* Cartão de produto */
-.cartao-produto {
-  background-color: var(--cor-superficie);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio);
-  box-shadow: var(--sombra);
-  padding: var(--espaco-3);
-  margin-bottom: var(--espaco-3); /* Um degrau entre um cartão e o seguinte */
-  max-width: 20rem;               /* Largura máxima em rem */
-}
-
-/* Legenda da foto dentro da figura */
-.figura-destaque figcaption {
-  color: var(--cor-texto-suave);
-  margin-top: var(--espaco-1);  /* Pequeno espaço entre a foto e a legenda */
-}
-
-/* Campo de digitar dentro da busca */
 .busca input[type="search"],
 .busca input[type="text"] {
   background-color: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio);
-  padding: 0.5em 0.75em;        /* Relativo à letra do próprio elemento (em) */
+  padding: 0.5em 0.75em;
   font-family: inherit;
   font-size: inherit;
+  vertical-align: middle; /* Mantém o input e o botão alinhados na mesma linha */
 }
 
-/* Botões do site (Lupa da busca e Enviar do cadastro escritos numa só regra) */
+/* 2. Botões do site (Lupa e Enviar Cadastro) */
 .busca button,
 .formulario-cadastro button[type="submit"] {
   background-color: var(--cor-marca);
   color: var(--cor-sobre-marca);
   border: none;
   border-radius: var(--raio);
-  padding: 0.5em 1em;           /* Relativo à letra do próprio elemento (em) */
+  padding: 0.5em 1em;
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
+  vertical-align: middle;
 }
 
-/* O aviso */
+/* Espaço para a lupa no botão de busca */
+.busca button {
+  padding: 0.5em 0.8em;
+}
+
+/* 3. O Aviso: Caixa com a borda na cor da marca */
 .aviso {
   background-color: var(--cor-superficie);
-  border: 1px solid var(--cor-marca);
+  border: 1px solid var(--cor-marca); /* Borda verde/marca em toda a volta */
   border-radius: var(--raio);
   padding: var(--espaco-3);
-  max-width: 65ch;              /* Mesma largura máxima dos parágrafos */
+  max-width: 65ch;
+  margin-top: var(--espaco-3);
   margin-bottom: var(--espaco-3);
 }
 
-
-/* ==========================================================================
-   PASSO 8 — Safra, Cadastro e Sobre
-   ========================================================================== */
-
-/* --- SAFRA --- */
-
-/* Células da tabela de safra */
-.tabela-safra th,
-.tabela-safra td {
-  padding: var(--espaco-2);
-}
-
-/* Cabeçalhos de coluna (linha dos meses) */
-.tabela-safra thead th {
-  background-color: var(--cor-marca);
-  color: var(--cor-sobre-marca);
-}
-
-/* Células de dado */
-.tabela-safra td {
-  background-color: var(--cor-superficie);
-}
-
-
-/* --- CADASTRO --- */
-
-/* Moldura dos dois grupos de fora do formulário */
+/* 4. Formulário de Cadastro: Espaçamento entre os rótulos e campos */
 .formulario-cadastro fieldset {
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio);
   padding: var(--espaco-3);
   margin-bottom: var(--espaco-3);
+  max-width: 65ch;
 }
 
-/* Grupo de dentro "Como entrega": sem borda e sem preenchimento */
-.formulario-cadastro fieldset fieldset {
-  border: none;
-  padding: 0;
-  margin-bottom: var(--espaco-2);
-}
-
-/* Título de cada grupo (legend) */
+/* Título de cada grupo (Quem é você, O que você vende, etc.) */
 .formulario-cadastro legend {
   font-weight: bold;
   color: var(--cor-marca);
   padding: 0 var(--espaco-1);
 }
 
-/* Campos de entrada, seleção e texto */
+/* Grupo de dentro "Como entrega": Sem borda, sem padding */
+.formulario-cadastro fieldset fieldset {
+  border: none;
+  padding: 0;
+  margin-top: var(--espaco-2);
+  margin-bottom: var(--espaco-2);
+}
+
+.formulario-cadastro fieldset fieldset legend {
+  padding-left: 0;
+}
+
+/* Parágrafos ou divs contendo Rótulo + Input no formulário */
+.formulario-cadastro p,
+.formulario-cadastro label {
+  margin-bottom: var(--espaco-2);
+}
+
+/* Estilo padrão de todos os campos de digitar / seleção */
 .formulario-cadastro input[type="text"],
 .formulario-cadastro input[type="email"],
 .formulario-cadastro input[type="tel"],
@@ -163,31 +94,12 @@
   background-color: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio);
-  padding: 0.5em 0.75em;        /* Relativo à letra do próprio elemento (em) */
+  padding: 0.5em 0.75em;
   font-family: inherit;
   font-size: inherit;
 }
 
-
-/* --- SOBRE --- */
-
-/* Citação do depoimento */
-blockquote {
-  color: var(--cor-texto-suave);
-  padding-left: var(--espaco-3); /* Recuo à esquerda com padding */
-  margin-bottom: var(--espaco-3);
-}
-
-/* Termos do glossário */
-dt {
-  font-weight: bold;
-}
-
-/* Pergunta do FAQ */
-.pergunta {
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio);
-  padding: var(--espaco-3);
-  margin-bottom: var(--espaco-2); /* Pequeno espaço entre uma e outra */
-  max-width: 65ch;                /* Mesma largura máxima dos parágrafos */
+/* Botão de Enviar Cadastro: Ganha margem acima para se separar do formulário */
+.formulario-cadastro button[type="submit"] {
+  margin-top: var(--espaco-2);
 }
