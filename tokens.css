@@ -23,6 +23,9 @@
   --raio-canto: 8px;
   --sombra: 0 2px 5px rgba(0, 0, 0, 0.1);
   --largura-maxima: 40rem;
+
+  --cor-marca-forte: #274e13; /* um verde bem escuro e fechado para o hover dos botões */
+  --cor-foco: #1d4ed8;       /* um azul vibrante e de alta visibilidade para o anel de foco */
 }
 
 /* Estilo global básico aplicado via tokens */
@@ -37,4 +40,18 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--fonte-titulo);
   color: var(--cor-marca);
+}
+
+/* Tema escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #121212;         /* Um preto suave/cinza bem escuro para o fundo da página */
+    --cor-superficie: #1e1e1e;    /* Um cinza um pouco mais claro para os cartões e blocos */
+    --cor-texto: #e2e8f0;         /* Um cinza bem claro (quase branco) para o texto principal */
+    --cor-texto-suave: #94a3b8;   /* Um cinza médio para textos secundários (como o produtor) */
+    --cor-marca: #4ade80;         /* Um verde vibrante para a marca no escuro (destaca bem no preto) */
+    --cor-marca-forte: #22c55e;   /* Um verde ligeiramente mais fechado para o hover dos botões */
+    --cor-sobre-marca: #052e16;   /* Um verde muito escuro para texto quando estiver sobre o fundo verde da marca */
+    --cor-foco: #60a5fa;          /* Um azul claro e luminoso para o anel de foco no escuro */
+  }
 }

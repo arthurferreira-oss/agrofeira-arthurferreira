@@ -160,3 +160,111 @@ dt {
   margin-bottom: var(--espaco-sm);
   max-width: var(--largura-maxima);
 }
+
+/* ==========================================
+   PARTE A: CATÁLOGO, GRADE, CASCA E CONTAINER QUERY
+   ========================================== */
+
+/* Passo 3: Grade de produtos e ajuste dos cartões */
+.listaprodutos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--espaco-medio);
+}
+
+.destaque {
+  grid-column: 1 / -1;
+}
+
+.cartao-produto {
+  max-width: none;
+  margin-bottom: 0;
+}
+
+/* Passo 4: Casca da página do catálogo (Mobile-first) */
+.pagina-catalogo {
+  display: grid;
+  grid-template-areas:
+    "cabecalho"
+    "menu"
+    "conteudo"
+    "lateral"
+    "rodape";
+  gap: var(--espaco-medio);
+}
+
+/* Ponto de quebra para telas largas (ajuste o valor em rem conforme o conteúdo do seu site) */
+@media (min-width: 48rem) {
+  .pagina-catalogo {
+    grid-template-columns: 14rem 1fr 16rem;
+    grid-template-areas:
+      "cabecalho cabecalho cabecalho"
+      "menu conteudo lateral"
+      "rodape rodape rodape";
+  }
+}
+
+/* Passo 5: Barra de categorias com Flexbox */
+.barra-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-pequeno);
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--espaco-medio);
+}
+
+/* Passo 6: Container query — Ajusta o layout interno do cartão dependendo do seu espaço disponível */
+.cartao-produto {
+  container-type: inline-size;
+}
+
+@container (min-width: 30rem) {
+  .cartao-produto article {
+    display: flex;
+    gap: var(--espaco-medio);
+    align-items: center;
+  }
+}
+
+/* ==========================================
+   PARTE B: TECLADO, ESTADOS, FOCO E :HAS()
+   ========================================== */
+
+/* Passo 7: Hover dos botões com a cor forte da marca */
+button:hover,
+.botao:hover,
+a.botao:hover {
+  background-color: var(--cor-marca-forte);
+}
+
+/* Passo 7: Foco visível do teclado para todos os elementos */
+*:focus-visible {
+  outline: 0.2rem solid var(--cor-foco);
+  outline-offset: 0.2rem;
+}
+
+/* Ajuste do anel de foco sobre fundos de marca (cabeçalho, menu, link de pular) */
+header *:focus-visible,
+nav *:focus-visible,
+.pular:focus-visible {
+  outline-color: var(--cor-sobre-marca);
+}
+
+/* Passo 8: :has() — Destaca o cartão inteiro quando o botão interno recebe foco do teclado */
+.cartao-produto:has(button:focus-visible) {
+  outline: 0.2rem solid var(--cor-foco);
+  outline-offset: 0.2rem;
+}
+
+/* Passo 9: Link de pular fora da tela por padrão, visível apenas no foco */
+.pular {
+  position: absolute;
+  top: -999rem;
+  left: -999rem;
+}
+
+.pular:focus-visible {
+  position: static;
+  display: inline-block;
+}
