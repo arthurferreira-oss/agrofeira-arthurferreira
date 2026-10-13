@@ -1,3 +1,5 @@
+@layer base {
+  /* (todos os seus tokens e o tema escuro ficam aqui dentro) */
 :root {
   /* Fontes (substitua Lora pelo nome da fonte que você pegou no Google Fonts) */
   --fonte-titulo: "Google Sans Flex", sans-serif;
@@ -54,4 +56,5 @@ h1, h2, h3, h4, h5, h6 {
     --cor-sobre-marca: #052e16;   /* Um verde muito escuro para texto quando estiver sobre o fundo verde da marca */
     --cor-foco: #60a5fa;          /* Um azul claro e luminoso para o anel de foco no escuro */
   }
+}
 }
