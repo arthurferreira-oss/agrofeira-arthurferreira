@@ -45,16 +45,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Tema escuro */
+/* Tema escuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --cor-fundo: #121212;         /* Um preto suave/cinza bem escuro para o fundo da página */
-    --cor-superficie: #1e1e1e;    /* Um cinza um pouco mais claro para os cartões e blocos */
-    --cor-texto: #e2e8f0;         /* Um cinza bem claro (quase branco) para o texto principal */
-    --cor-texto-suave: #94a3b8;   /* Um cinza médio para textos secundários (como o produtor) */
-    --cor-marca: #4ade80;         /* Um verde vibrante para a marca no escuro (destaca bem no preto) */
-    --cor-marca-forte: #22c55e;   /* Um verde ligeiramente mais fechado para o hover dos botões */
-    --cor-sobre-marca: #052e16;   /* Um verde muito escuro para texto quando estiver sobre o fundo verde da marca */
-    --cor-foco: #60a5fa;          /* Um azul claro e luminoso para o anel de foco no escuro */
+    --cor-fundo: #17111e;         /* Um tom de roxo bem escuro para o fundo geral */
+    --cor-superficie: #221a2d;    /* Um roxo escuro um pouco mais claro para os cartões e blocos */
+    --cor-texto: #f3e8ff;         /* Um tom claro e suave para o texto principal */
+    --cor-texto-suave: #d8b4fe;   /* Um roxo claro/lilás suave para textos secundários */
+    --cor-marca: #c084fc;         /* Um lilás/roxo vibrante para a marca no escuro */
+    --cor-marca-forte: #a855f7;   /* Um roxo mais forte para o hover dos botões */
+    --cor-sobre-marca: #3b0764;   /* Um roxo bem escuro para texto sobre fundos de marca */
+    --cor-foco: #60a5fa;          /* Azul luminoso para o anel de foco */
   }
 }
 }
