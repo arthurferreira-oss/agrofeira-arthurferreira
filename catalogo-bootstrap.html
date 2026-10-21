@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - AgroFeira (Bootstrap)</title>
+  <!-- Bootstrap 5.3.8 CSS (Quick start link) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl3a2I2b9q9m1F7f1S5f1c5f1c5f1c5f1c5f1c5f1c5f1c5f1c5f1c5f1c5f1c" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Cabeçalho -->
+    <header class="d-flex justify-content-between align-items-center py-3 mb-4">
+      <h1 class="display-6 mb-0">AgroFeira</h1>
+      <a href="index.html" class="text-decoration-none">Início</a>
+    </header>
+
+    <!-- Linha principal com main e aside -->
+    <div class="row g-4">
+      <!-- Coluna Principal -->
+      <main class="col-lg-9">
+        <!-- Aviso -->
+        <div class="alert alert-warning" role="alert">
+          Entregas só às sextas-feiras. Pedidos até quinta, às 18h.
+        </div>
+
+        <!-- Título e Introdução -->
+        <h2>Produtos da semana</h2>
+        <p class="lead">O que chegou das colônias de Paragominas nesta semana.</p>
+
+        <!-- Grade de Produtos -->
+        <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 list-unstyled">
+          
+          <!-- 1. Açaí (com selo Safra nova) -->
+          <li class="col">
+            <article class="card h-100">
+              <img src="img/acai.jpg" class="card-img-top img-fluid" width="600" height="400" alt="Açaí médio em tigela">
+              <div class="card-body">
+                <p class="badge text-bg-success">Safra nova</p>
+                <h3 class="card-title h5">Açaí médio</h3>
+                <p class="card-text text-body-secondary">Colônia do Uraim</p>
+                <p class="card-text fw-bold">R$ 14,00</p>
+                <button type="button" class="btn btn-primary">Adicionar</button>
+              </div>
+            </article>
+          </li>
+
+          <!-- 2. Farinha -->
+          <li class="col">
+            <article class="card h-100">
+              <img src="img/farinha.jpg" class="card-img-top img-fluid" width="600" height="400" alt="Farinha d'água crocante">
+              <div class="card-body">
+                <h3 class="card-title h5">Farinha d'água</h3>
+                <p class="card-text text-body-secondary">Assentamento 8 de Março</p>
+                <p class="card-text fw-bold">R$ 10,00</p>
+                <button type="button" class="btn btn-primary">Adicionar</button>
+              </div>
+            </article>
+          </li>
+
+          <!-- 3. Banana -->
+          <li class="col">
+            <article class="card h-100">
+              <img src="img/banana.jpg" class="card-img-top img-fluid" width="600" height="400" alt="Cacho de banana prata madura">
+              <div class="card-body">
+                <h3 class="card-title h5">Banana prata</h3>
+                <p class="card-text text-body-secondary">Sítio Boa Esperança</p>
+                <p class="card-text fw-bold">R$ 7,00</p>
+                <button type="button" class="btn btn-primary">Adicionar</button>
+              </div>
+            </article>
+          </li>
+
+          <!-- 4. Pimenta -->
+          <li class="col">
+            <article class="card h-100">
+              <img src="img/pimenta.jpg" class="card-img-top img-fluid" width="600" height="400" alt="Pimenta de cheiro fresca">
+              <div class="card-body">
+                <h3 class="card-title h5">Pimenta de cheiro</h3>
+                <p class="card-text text-body-secondary">Horta Comunitária Nova Esperança</p>
+                <p class="card-text fw-bold">R$ 5,00</p>
+                <button type="button" class="btn btn-primary">Adicionar</button>
+              </div>
+            </article>
+          </li>
+
+          <!-- 5. Cacau -->
+          <li class="col">
+            <article class="card h-100">
+              <img src="img/cacau.jpg" class="card-img-top img-fluid" width="600" height="400" alt="Frutos de cacau frescos">
+              <div class="card-body">
+                <h3 class="card-title h5">Cacau em Foco</h3>
+                <p class="card-text text-body-secondary">Agrovila Palmares</p>
+                <p class="card-text fw-bold">R$ 12,00</p>
+                <button type="button" class="btn btn-primary">Adicionar</button>
+              </div>
+            </article>
+          </li>
+
+          <!-- 6. Cupuaçu -->
+          <li class="col">
+            <article class="card h-100">
+              <img src="img/cupuacu.jpg" class="card-img-top img-fluid" width="600" height="400" alt="Polpa de cupuaçu fresca">
+              <div class="card-body">
+                <h3 class="card-title h5">Polpa de cupuaçu</h3>
+                <p class="card-text text-body-secondary">Colônia Nova</p>
+                <p class="card-text fw-bold">R$ 15,00</p>
+                <button type="button" class="btn btn-primary">Adicionar</button>
+              </div>
+            </article>
+          </li>
+
+          <!-- 7. Jambu -->
+          <li class="col">
+            <article class="card h-100">
+              <img src="img/jambu.jpg" class="card-img-top img-fluid" width="600" height="400" alt="Maço de jambu fresco">
+              <div class="card-body">
+                <h3 class="card-title h5">Jambu</h3>
+                <p class="card-text text-body-secondary">Sítio São Luís</p>
+                <p class="card-text fw-bold">R$ 6,00</p>
+                <button type="button" class="btn btn-primary">Adicionar</button>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </main>
+
+      <!-- Coluna Lateral (Aside) -->
+      <aside class="col-lg-3 d-none d-lg-block">
+        <h2 class="h5">Mais pedidos</h2>
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item">Açaí médio</li>
+          <li class="list-group-item">Farinha d'água</li>
+          <li class="list-group-item">Polpa de cupuaçu</li>
+        </ol>
+      </aside>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="py-4 text-body-secondary">
+      <p>&copy; AgroFeira — Alimentos da agricultura familiar de Paragominas.</p>
+      <p>Imagens ilustrativas obtidas de bancos de imagens livres.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
