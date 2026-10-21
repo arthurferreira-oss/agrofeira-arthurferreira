@@ -1,61 +1,53 @@
 @layer base {
   /* (todos os seus tokens e o tema escuro ficam aqui dentro) */
-:root {
-  /* Fontes (substitua Lora pelo nome da fonte que você pegou no Google Fonts) */
-  --fonte-titulo: "Google Sans Flex", sans-serif;
-  --fonte-corpo: system-ui, -apple-system, sans-serif;
-
-  /* Cores */
-  --cor-marca: #1b5e20;
-  --cor-sobre-marca: #ffffff;
-  --cor-fundo: #f4f6f4;
-  --cor-superficie: #ffffff;
-  --cor-texto: #212121;
-  --cor-texto-suave: #666666;
-  --cor-borda: #cccccc;
-
-  /* Espaçamentos */
-  --espaco-xs: 0.25rem;
-  --espaco-sm: 0.5rem;
-  --espaco-md: 1rem;
-  --espaco-lg: 2rem;
-
-  /* Outros Tokens */
-  --borda-fina: 1px solid var(--cor-borda);
-  --raio-canto: 8px;
-  --sombra: 0 2px 5px rgba(0, 0, 0, 0.1);
-  --largura-maxima: 40rem;
-
-  --cor-marca-forte: #274e13; /* um verde bem escuro e fechado para o hover dos botões */
-  --cor-foco: #1d4ed8;       /* um azul vibrante e de alta visibilidade para o anel de foco */
-}
-
-/* Estilo global básico aplicado via tokens */
-body {
-  font-family: var(--fonte-corpo);
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
-  margin: 0;
-  padding: var(--espaco-md);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--fonte-titulo);
-  color: var(--cor-marca);
-}
-
-/* Tema escuro */
-/* Tema escuro */
-@media (prefers-color-scheme: dark) {
   :root {
-    --cor-fundo: #17111e;         /* Um tom de roxo bem escuro para o fundo geral */
-    --cor-superficie: #221a2d;    /* Um roxo escuro um pouco mais claro para os cartões e blocos */
-    --cor-texto: #f3e8ff;         /* Um tom claro e suave para o texto principal */
-    --cor-texto-suave: #d8b4fe;   /* Um roxo claro/lilás suave para textos secundários */
-    --cor-marca: #c084fc;         /* Um lilás/roxo vibrante para a marca no escuro */
-    --cor-marca-forte: #a855f7;   /* Um roxo mais forte para o hover dos botões */
-    --cor-sobre-marca: #3b0764;   /* Um roxo bem escuro para texto sobre fundos de marca */
-    --cor-foco: #60a5fa;          /* Azul luminoso para o anel de foco */
+    /* Fontes */
+    --fonte-titulo: "Google Sans Flex", sans-serif;
+    --fonte-corpo: system-ui, -apple-system, sans-serif;
+
+    /* Cores */
+    --cor-marca: #1b5e20;
+    --cor-marca-rgb: 27, 94, 32; /* Trio RGB da marca (tema claro) */
+    
+    --cor-sobre-marca: #ffffff;
+    --cor-fundo: #f4f6f4;
+    --cor-superficie: #ffffff;
+    --cor-texto: #212121;
+    --cor-texto-suave: #666666;
+    --cor-borda: #cccccc;
+
+    /* Espaçamentos */
+    --espaco-xs: 0.25rem;
+    --espaco-sm: 0.5rem;
+    --espaco-md: 1rem;
+    --espaco-lg: 2rem;
+
+    /* Outros Tokens */
+    --borda-fina: 1px solid var(--cor-borda);
+    --raio-canto: 8px;
+    --sombra: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --largura-maxima: 40rem;
+
+    --cor-marca-forte: #274e13; /* um verde bem escuro e fechado para o hover dos botões */
+    --cor-marca-forte-rgb: 39, 78, 19; /* Trio RGB forte (tema claro) */
+    
+    --cor-foco: #1d4ed8; /* um azul vibrante e de alta visibilidade para o anel de foco */
   }
-}
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Cores para o tema escuro */
+      --cor-marca: #4caf50;
+      --cor-marca-rgb: 76, 175, 80;
+      
+      --cor-marca-forte: #81c784;
+      --cor-marca-forte-rgb: 129, 199, 132;
+      
+      --cor-fundo: #121212;
+      --cor-superficie: #1e1e1e;
+      --cor-texto: #e0e0e0;
+      --cor-texto-suave: #aaaaaa;
+      --cor-borda: #333333;
+    }
+  }
 }
